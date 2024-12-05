@@ -428,6 +428,47 @@ body {
     margin-right: 15px;
 }
 
+.contact-info {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to stack on small screens */
+    gap: 10px; /* Adds space between items */
+}
+
+.contact-info div {
+    white-space: normal; /* Allows text to wrap */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Shows "..." if needed */
+    max-width: 100%; /* Ensures the content stays within the container */
+}
+
+.contact-link {
+    margin-left: 8px; /* Adds spacing between the icon and the text */
+    text-decoration: none; /* Removes underline for links */
+    color: inherit; /* Inherits text color */
+    word-wrap: break-word; /* Allows breaking long strings (for URLs/emails) */
+}
+
+.contact-link:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+.email-link,
+.web-link {
+    overflow: visible; /* Ensures full visibility of longer content */
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column; /* Stacks items on small screens */
+        align-items: flex-start; /* Aligns items to the left */
+    }
+
+    .contact-link {
+        word-wrap: break-word; /* Breaks long text to prevent cutoff */
+    }
+}
+
+
 /* -------------------Social Icons--------------- */
 .social-icons {
     top: 50%;
