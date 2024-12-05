@@ -1,0 +1,478 @@
+body {
+    margin:0; 
+    padding: 0;
+    font-family: sans-serif;
+
+}
+
+/* testing navbar nonsense - added becasue navbar was covering headers of some sections */
+#about,
+#resume,
+#projects,
+#services,
+#contact {
+    padding-top: 70px; /* Adjust the value based on navbar height */
+}
+
+
+/* -------- header CSS ------------ */
+#header {
+    height: 100vh;
+    /* background-image: url(imgs/flippedcrow.png); */
+    /* background: linear-gradient(#e66465, #9198e5); */ /* a light pink/orage gradient */
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%); /* a darker blue black gradient */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.user-box {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.user-box img {
+    border-radius: 50%;
+    width: 450px;
+    border: 2px solid #000; /* I like this blue #6caed5 but we made it black to match the moving "click me" */
+    margin: 20px;
+}
+
+.hobbies {
+    height: 200px;
+    border-radius: 20%;
+    border: 2px solid black;
+    margin-left:50%;
+    margin-top: -15px;
+    
+}
+
+
+
+.user-box h1 {
+    color: #fff;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.user-box p {
+    color: #fff;
+}
+
+.user-box h2 {
+    color: #fff;
+}
+
+.scroll-btn {
+    bottom: 30px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px transparent;
+    padding: 10px 10px 20px; 
+    border-radius: 30px;
+}
+
+.scroll-bar h1:hover {
+    border: 2px solid #000;
+    background: #000;
+    transition: 1s;
+    border-radius: 50px;
+}
+
+/* Moving button at top of page */
+.scroll-bar h1 {
+    border: 2px solid #000;
+    padding: 30px;
+    background: #000;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.scroll-bar  {
+    animation: mover 3s infinite linear; 
+}
+
+.scroll-bar a {
+    text-decoration: none;
+}
+
+/* bouncy animation 
+@keyframes mover {
+    0%{transform: translateY(0);}
+    0%{transform: translateY(30px);}
+}  */
+
+/* testing rotation stuff */
+@keyframes mover {
+    /* 0%{transform: translateX(0);}
+    0%{transform: rotate(360deg) translate(100px) rotate(-360deg) translate(-100px);}*/
+
+    from { 	-webkit-transform: rotate(0deg) translateX(50px) rotate(0deg); }
+	to   {  -webkit-transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+
+/* ---- About meeee --- */
+.about {
+    padding-top: 70px;
+    /* padding-bottom: 50px; */
+    margin-bottom: -130px;
+}
+
+
+.profile-img {
+    height: 450px;
+    border-radius: 20%;
+    border: 2px solid black;
+}
+
+/* -----------nav-bar------------- */
+
+.navbar-brand .fa-solid {
+    color: #fff;
+    font-size: 40px;
+}
+
+/* soccer ball animation */
+.navbar-brand .fa-futbol{
+    animation: moverr 3s infinite linear;
+    animation-direction: alternate-reverse;
+    margin: 10px 0px 10px 500px;
+}
+@keyframes moverr {
+    0%{transform: translateX(300px);}
+    
+}
+
+.nav-bar {
+    top: 0;
+    position: sticky;
+    z-index: 2;
+    background-color: #000;
+}
+
+/* .nav-bar {
+    background-color: #bbbfbc;
+} */
+
+.navbar-brand img{
+    height: 50px;
+}
+
+/* Come back and fix this nav bar toggle icon later - remove border too*/
+.navbar-toggler:focus {
+    /*Below line will remove the border from the icon
+    I have used bootstrap icon here */
+    /* This will only remove the shadow effect */
+    /* Border is still there */
+    /* if you don't want any border then set the property equals to zero */
+    border: 0 !important;
+    box-shadow: none !important;
+  
+    /* This will remove the rounded corner(radious-border)
+    and give square border */
+    /* border-radius: 0 !important; */    
+}
+
+.navbar-toggler {
+    /* This will completely remove border from the icon */
+    /* If you need border for the icon then comment this code */
+     border: 0 !important;
+
+    /* if you want to check the border please uncomment below code */
+    /* border-color: yellow !important; */
+}
+
+/* Hamburger button colors "toggler" */
+.navbar-toggler i {
+    color: #fff;
+}
+
+/* moves nav bar menu options to the right */
+.navbar-nav {
+    float: right;
+    text-align: right;
+}
+
+/* nav bar links text color */
+.nav-link {
+    color: #fff !important;
+}
+
+/* skills progress bars */
+.skills-bar p {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.progress {
+    border-radius: 16px;
+    margin-bottom: 10px;
+}
+
+.progress-bar {
+    border-radius: 16px;
+    background: #000 !important;
+}
+
+/* -------------------- Resume --------------------------- */
+.resume {
+    margin-top: -50px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background-color: #f9f9f9;
+}
+
+.resume h3 {
+    margin-bottom: 50px;
+
+}
+
+/* forgot what this does - must look up */
+.timeline {
+    list-style-type: none;
+    position: relative;
+
+}
+
+/* creates the little bar on the left side of the "My Experience" section */
+.timeline:before {
+    content: '';
+    background-color: #555;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 1;
+}
+
+/* space added to the left of the li elements in the experience section to move it away from that black line 
+.some-space {
+    padding-left: 5px;
+} */
+
+/* controls the area wihin each li - description company location etc  --- add in curvyness to a border */
+.timeline li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background: #f9f9f9; /* replacing  this white with #f9f9f9 later */
+}
+
+/* handles the "title area" for my roles in the experience */
+.timeline li h4 {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 0px 5px 10px;
+    font-size: 17px;
+}
+
+/* changes the color of the years for the roles i worked */
+.timeline li h4 span {
+    font-weight: bold;
+    color: #ccc;
+
+}
+
+/* This creates the little circles on the experience timeline bar */
+.timeline li:before {
+    content: '';
+    background-color: #fff;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #000;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+}
+
+/* ------------ Services / projects ------ */
+
+.vid-space {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+.vids {
+    width: 100%;
+    border: 3px solid #000;
+    border-radius: 5%;
+}
+
+.services {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.services h1 {
+    margin-bottom: 15px;
+
+}
+
+.services-box {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-top: 20px;
+    /* Addss curvy yams to the top right and bottom left of the border */
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.services-box .fa {
+    margin: 0 10px; 
+    font-size: 20px;
+}
+
+.services-box span {
+    margin: 3px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.services-box  p {
+    font-size: 15px;
+    color: #777;
+    margin-top:  10px;
+}
+
+/* Clean ass hover effect lmao */
+.services-box:hover {
+    background-color: #000;
+    color: #fff;
+    /* Addss curvy yams to the top right and bottom left of the border - swaps em */
+    border-top-right-radius: 0px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 50px;
+    transition: 1s;
+}
+
+/* changes text color when hovers */
+.services-box:hover p {
+    color: #fff;
+}
+
+.resume-button .btn {
+    padding: 10px 25px 10px 25px;
+    margin: 5px;
+    border-radius: 30px;
+    border: 2px solid #000;
+    color: #000;
+    background: transparent;
+}
+
+.resume-button .btn:focus {
+    box-shadow: none !important;
+}
+
+.resume-button .btn:hover {
+    border: 2px solid #000 !important;
+    background: #000 !important;
+    transition: 0.6s;
+}
+
+/* adding space between button icon and txt */
+.resume-button .btn .fa-solid {
+    margin-right: 15px;
+}
+
+
+/* ----------Contact--------- */
+.contact {
+    padding-top: 50px;
+    /* background-image: url(imgs/flippedcrow.png); */
+    /* background: linear-gradient(#e66465, #9198e5); */ /* a light pink/orage gradient */
+    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%); /* a darker blue black gradient */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+.contact .row {
+    padding: 30px 0;
+    font-size: 22px;
+}
+
+/* makes icons bigger */
+.contact .col-md-4 .fa-solid {
+    padding: 10px;
+    font-size: 40px;
+}
+
+.contact .btn {
+    padding: 10px 25px 10px 25px;
+    margin: 5px;
+    border-radius: 30px;
+    border: 2px solid #fff;
+    background: transparent;
+}
+
+.contact .btn:focus {
+    box-shadow: none !important;
+}
+
+.contact .btn:hover {
+    border: 2px solid #000 !important;
+    background: #000 !important;
+    transition: 0.6s;
+}
+
+/* adding space between button icon and txt */
+.contact .btn .fa-solid {
+    margin-right: 15px;
+}
+
+/* -------------------Social Icons--------------- */
+.social-icons {
+    top: 50%;
+    transform: translateY(-50%);
+    position: sticky; 
+    z-index: 1;
+    width: 80px;
+}
+
+.social-icons ul {
+    padding: initial; /* removes padding on left side */
+}
+
+.social-icons ul li {
+    height: 40px;
+    width: 45px;
+    list-style-type: none;
+    padding-left: 12px;
+    padding-top: 6px;
+    margin-top: 6px;
+    color: #fff;
+    background-color: #000;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.social-icons ul li:hover {
+    padding-left: 30px;
+    width: 60px;
+    transition: 1s;
+}
+
+/* -----------Foooterrr------- */
+.footer {
+    background-color: #000;
+    height: 50px;
+    margin-top: 50px;
+    color: #fff;
+    padding-top: 10px;
+}
+
+.fa-heart {
+    color: red;
+}
+/* disabled - only used to visually see each section 
+.container {
+    border: 3px solid black;
+} */
