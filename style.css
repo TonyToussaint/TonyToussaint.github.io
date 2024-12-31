@@ -76,9 +76,10 @@ body {
     font-size: 1.2rem; /* Adjusted size for responsiveness */
 }
 
+/* removing this animation for now
 .scroll-bar {
     animation: mover 3s infinite linear;
-}
+} */
 
 .scroll-bar a {
     text-decoration: none;
@@ -109,8 +110,8 @@ body {
 }
 
 
-/* testing rotation stuff */
-@keyframes mover {
+/* testing rotation stuff */ 
+ @keyframes mover {
     /* 0%{transform: translateX(0);}
     0%{transform: rotate(360deg) translate(100px) rotate(-360deg) translate(-100px);}*/
 
