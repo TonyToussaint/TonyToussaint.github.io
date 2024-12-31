@@ -76,10 +76,10 @@ body {
     font-size: 1.2rem; /* Adjusted size for responsiveness */
 }
 
-/* removing this animation for now
+
 .scroll-bar {
-    animation: mover 3s infinite linear;
-} */
+    animation: mover 3s 1 linear;
+}
 
 .scroll-bar a {
     text-decoration: none;
@@ -111,12 +111,18 @@ body {
 
 
 /* testing rotation stuff */ 
- @keyframes mover {
+@keyframes mover {
     /* 0%{transform: translateX(0);}
     0%{transform: rotate(360deg) translate(100px) rotate(-360deg) translate(-100px);}*/
 
-    from { 	-webkit-transform: rotate(0deg) translateX(50px) rotate(0deg); }
-	to   {  -webkit-transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+    from { 
+        -webkit-transform: rotate(0deg) translateX(35px) rotate(0deg);
+        transform: rotate(0deg) translateX(35px) rotate(0deg);
+    }
+    to { 
+        -webkit-transform: rotate(360deg) translateX(35px) rotate(-360deg);
+        transform: rotate(360deg) translateX(35px) rotate(-360deg);
+    }
 }
 
 /* ---- About meeee --- */
