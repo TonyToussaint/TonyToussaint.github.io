@@ -144,7 +144,7 @@ body {
 .navbar-brand .fa-futbol{
     animation: moverr 3s infinite linear;
     animation-direction: alternate-reverse;
-    margin: 10px 0px 10px 500px;
+    margin: 10px 0px 0px 500px;
 }
 @keyframes moverr {
     0%{transform: translateX(300px);}
